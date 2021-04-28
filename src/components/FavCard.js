@@ -11,10 +11,10 @@ const FavCard = ( {heading, description, src, Icon, } ) => {
                 <p>{description}</p>
             </div>
             <div className="favorites__btn1">
-                <Btn text={true} text={"SHOP MEN"}/>
+                <Btn color={false} text={"SHOP MEN"}/>
             </div>
             <div className="favorites__btn2">
-                <Btn text={true} text={"SHOP WOMEN"}/>
+                <Btn color={false} text={"SHOP WOMEN"}/>
             </div>
         </div>
     );
