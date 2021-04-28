@@ -1,14 +1,11 @@
 .header__left{
     display:flex;
     font-size: 14px;
-
 }
 
 .header__left>h3{
     padding-right: 10px;
 }
-
-
 
 .header__mid{
     width:100px;
@@ -17,10 +14,7 @@
 
 .header__right{
     display:flex;
-    
-
 }
-
 
 .header__container{
     display:flex;

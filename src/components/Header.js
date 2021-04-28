@@ -11,7 +11,7 @@ const Header=()=>{
                     <h3>MEN</h3>
                     <h3>WOMEN</h3>
                 </div>
-                 
+                
                <div className="header__mid">
                <img src="https://cdn.allbirds.com/image/upload/v1571355713/icons/allbirds-logo.svg" alt=""/>
                </div>
@@ -20,16 +20,8 @@ const Header=()=>{
                    <PermIdentityIcon/>
                    <HelpOutlineIcon/>
                    <ShoppingCartIcon/>
-
-
-
-
                </div>
-               
-                
-                
             </div>
-
         </div>
     )
 }
