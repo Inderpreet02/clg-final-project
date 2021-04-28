@@ -1,0 +1,67 @@
+.favCard{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    box-shadow: rgba(85, 85, 85, 0.651) 0 0 20px 0;
+    margin: 15px;
+    position: relative;
+}
+
+.favCard > img{
+    width: 100%;
+    min-width: 250px;
+}
+
+
+.favCard > h2{
+    padding: 10px 5px;
+    margin: 0 25px;
+    text-align: left;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.329);
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.icon__padding{
+    padding: 0 10px;
+}
+
+.favCard__text{
+    min-width: 250px;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.favorite__containerOptions{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: #666;
+    letter-spacing: 3px;
+    font-size: 14px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.favorites__btn1{
+    position: absolute;
+    margin: auto;
+    top: 20%;
+    width: 92%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.favorites__btn2{
+    position: absolute;
+    margin: auto;
+    top: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
