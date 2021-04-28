@@ -1,0 +1,36 @@
+.header__left{
+    display:flex;
+    font-size: 14px;
+
+}
+
+.header__left>h3{
+    padding-right: 10px;
+}
+
+
+
+.header__mid{
+    width:100px;
+    height:auto;
+}
+
+.header__right{
+    display:flex;
+    
+
+}
+
+
+.header__container{
+    display:flex;
+    padding:15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    position:sticky;
+    top:0;
+    background-color: #fff;
+}
