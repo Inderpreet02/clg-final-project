@@ -28,4 +28,5 @@
     top:0;
     background-color: #fff;
     z-index: 100;
+    box-shadow: rgba(34, 34, 34, 0.473) 0 0 30px 0;
 }

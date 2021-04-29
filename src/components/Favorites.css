@@ -1,5 +1,5 @@
 .favorites{
-    max-width: 1400px;
+    max-width: 1500px;
     width: 100%;
     margin: 50px auto;
 }
@@ -7,12 +7,32 @@
 .favorites__container{
     text-align: center;
     /* padding: 1rem; */
+    margin: 150px 0;
 }
 
 .favorites__main{
-    max-width: 1200px;
-    width: 100%;
+    max-width: 1400px;
+    width: 95%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+}
+
+.op1, .op2, .op3{
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.bold{
+    border-bottom: 2px solid black;
+    color: black;
+    padding: 4px 10px;
+}
+
+@media screen and (max-width: 780px) {
+    .favorites__main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
