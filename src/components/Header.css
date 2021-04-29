@@ -1,14 +1,11 @@
 .header__left{
     display:flex;
     font-size: 14px;
-
 }
 
 .header__left>h3{
     padding-right: 10px;
 }
-
-
 
 .header__mid{
     width:100px;
@@ -17,10 +14,7 @@
 
 .header__right{
     display:flex;
-    
-
 }
-
 
 .header__container{
     display:flex;
@@ -34,4 +28,5 @@
     top:0;
     background-color: #fff;
     z-index: 100;
+    box-shadow: rgba(34, 34, 34, 0.473) 0 0 30px 0;
 }

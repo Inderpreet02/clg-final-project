@@ -9,17 +9,12 @@ const Main=()=>{
                 <div className="main__content">
                     <h1>Light On Your Feet. Light On Your Planet</h1>
                     <div className="mainbtn__1">
-                         <Btn id="btn1" color={false} text={"SHOP MEN"}/>
-                         <Btn id="btn2" color={false} text={"SHOP WOMEN"}/>
+                         <Btn id="btn1" color={true} text={"SHOP MEN"}/>
+                         <Btn id="btn2" color={true} text={"SHOP WOMEN"}/>
                     </div>
-                   
-                    
-                   
-                    
                 </div>
             </div>
         </div>
-
     )
 }
 
