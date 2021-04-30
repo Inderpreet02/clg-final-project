@@ -31,12 +31,11 @@
     margin-right: 50px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 980px) {
     .mainbtn__1{
         display: none;
     }
     
-
 }
 
 @media screen and (max-width: 800px) {

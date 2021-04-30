@@ -2,6 +2,9 @@ import FavCard from "./FavCard";
 import "./Favorites.css"
 import WavesIcon from '@material-ui/icons/Waves';
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { LOGIN, selectUser } from "../features/userSlice";
+
 
 const Favorites = () => {
 
@@ -29,14 +32,20 @@ const Favorites = () => {
 
     const apparel = [
         {
+            id: 1,
+            className : "test__1",
             heading : "Long Sleeve Tee",
             description : "Soft And Fresh Basics",
             src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/4uT05s4ZabFfWAErMTBKYo/1",
         },{
+            id: 2,
+            className : "test__2",
             heading : "Tee",
             description : "Naturally Soft Tee",
             src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/798cAV2hqBT0QBO9LdtH16/1",
         },{
+            id: 3,
+            className : "test__3",
             heading : "Wool Hoodie",
             description : "Cozy Double Knit Hoodie",
             src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/2UykjbxmUa680bTQnow36J/2",
@@ -45,21 +54,28 @@ const Favorites = () => {
 
     const basics = [
         {
-            heading : "Long Sleeve Tee",
-            description : "Soft And Fresh Basics",
-            src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/6zakQ3mbPCXQU23h5vsEe3/2",
+            id: 1,
+            className : "test__1",
+            heading : "Socks",
+            description : "Breezy Ankle Sock",
+            src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/54RKtCME01Cnj0WrpaNCgH/2",
         },{
-            heading : "Tee",
-            description : "Naturally Soft Tee",
-            src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/5OndhAGrtVvJanLRyuqHcm/2",
+            id: 2,
+            className : "test__2",
+            heading : "Socks",
+            description : "Breezy Ankle Sock",
+            src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/54RKtCME01Cnj0WrpaNCgH/2",
         },{
-            heading : "Wool Hoodie",
-            description : "Cozy Double Knit Hoodie",
-            src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/3SIs1eQwd7uJHonZHJX4gA/2",
+            id: 3,
+            className : "test__3",
+            heading : "Socks",
+            description : "Breezy Ankle Sock",
+            src : "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/categoryCarouselCard/en-US/images/54RKtCME01Cnj0WrpaNCgH/2",
         }
     ]
 
     const [currData, setCurrData] = useState(shoes);
+    // console.log(shoes)
 
     // document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
 
@@ -97,6 +113,13 @@ const Favorites = () => {
         setCurrData(basics);
         selectCurrGenra3();
     }
+    
+    // const dispatch = useDispatch();
+    // dispatch(LOGIN({
+    //     user: "test user",
+    // }));
+    // const user = useSelector(selectUser);
+    // console.log("THIS IS THE USER -------> ", user );
 
     return (
         <div className="favorites">
