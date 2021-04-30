@@ -6,6 +6,7 @@
     margin: 15px;
     position: relative;
     min-width: 250px;
+    min-height: 90%;
 }
 
 .favCard > img{
