@@ -1,8 +1,8 @@
 import "./Btn.css"
 
-const Btn = ( {text, color} ) => {
+const Btn = ( {text, color, onClick} ) => {
     return (
-        <div className="btn">
+        <div className="btn" onClick={onClick}>
             {color ? (
                 <div className="btn__containerBlue">
                     <h4>{text}</h4>

@@ -7,13 +7,21 @@
     position: relative;
     min-width: 250px;
     min-height: 90%;
+    filter : grayscale(0%);
+    transition: filter 1s;
 }
 
 .favCard > img{
     width: 100%;
     min-width: 250px;
+    filter : grayscale(0%);
+    transition: filter 1s;
 }
 
+.favCard > img:hover{
+    filter : grayscale(80%) contrast(120%);
+    transition: filter 100ms;
+}
 
 .favCard > h2{
     padding: 10px 5px;
@@ -54,9 +62,8 @@
     margin: auto;
     top: 20%;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-around;
-    
 }
 
 .favorites__btn2{
@@ -64,16 +71,21 @@
     margin: auto;
     top: 35%;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
 .show{
-    display: block;
+    display: flex;
+    transition: flex 1s;
 }
 
 .hide{
     display: none;
+}
+
+.grey{
+    filter: grayscale(80%) contrast(120%);
 }
 
 @media screen and (max-width: 1000px){

@@ -15,3 +15,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body::-webkit-scrollbar-track{
+	--webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb{
+	background-color: rgb(33, 42, 47);
+}
+
+body{
+  overflow-x: hidden;
+}
+
+body, html, #root{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

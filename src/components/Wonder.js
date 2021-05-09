@@ -1,3 +1,4 @@
+import Btn from "./Btn";
 import "./Wonder.css";
 
 const Wonder=()=>{
@@ -12,7 +13,10 @@ const Wonder=()=>{
                         happens to reduce odor and keep you cool? With
                         nature,naturally.
                     </p>
-
+                    <div className="wonder__btnContainer">
+                        <Btn text={"SHOP MEN"} color={!true}/>
+                        <Btn text={"SHOP WOMEN"} color={!true}/>
+                    </div>
                 </div>
             </div>
         </div>
