@@ -1,8 +1,36 @@
 .wonder__content{
     text-align: center;
+    font-size: large;
+    color: rgb(33, 42, 47);
 }
 
 .wonder__img>img{
     width:100%;
     margin:50px 0;
+}
+
+.wonder__content > p{
+    width: 50%;
+    text-align: center;
+    margin: 40px auto;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.wonder__btnContainer{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 500px;
+    min-width: 420px;
+}
+
+@media screen and (max-width: 500px) {
+    .wonder__btnContainer{
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
 }
