@@ -60,3 +60,17 @@
     color: black;
     transition: 0.2s ease-in;
 }
+
+.google__btn{
+    background-color: rgb(48, 138, 48);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: 2px solid rgb(48, 138, 48);
+}
+
+.google__btn > img{
+    width: 40px;
+}
