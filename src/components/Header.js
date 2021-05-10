@@ -4,7 +4,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { LOGOUT, selectBasket } from "../features/userSlice";
+import { LOGOUT, selectBasket, selectUser } from "../features/userSlice";
 import logo from "./forbirds.png"
 
 const Header=()=>{
@@ -15,6 +15,8 @@ const Header=()=>{
     const ToLogout = () => {
         dispatch(LOGOUT());
     }
+
+    const user = useSelector(selectUser);
 
     return(
         <div className="header">
@@ -31,7 +33,9 @@ const Header=()=>{
                </Link>
 
                <div className="header__right">
-                   <PermIdentityIcon onClick={ToLogout} className="logout__styles"/>
+                   <span className="logout__span" onClick={ToLogout}>LOGOUT
+                        <PermIdentityIcon className="logout__styles"/>
+                   </span>
                    <HelpOutlineIcon/>
                    <Link to="/checkout" className="link">
                        <ShoppingCartIcon/>

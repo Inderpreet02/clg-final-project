@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./Login.css"
-import {auth} from "../firebase"
+import {auth, provider} from "../firebase"
 import { useDispatch } from "react-redux";
 import { LOGIN } from "../features/userSlice";
+import logo from "./icon-google.svg"
 
 const Login = () => {
 
@@ -53,6 +54,19 @@ const Login = () => {
         .catch((err) => alert(err))
     }
 
+    const LoginGoogle = (e) =>{
+        e.preventDefault();
+        auth.signInWithPopup(provider)
+        .then(userAuth => {
+            dispatch(LOGIN({
+                displayName: userAuth.user.displayName,
+                email: userAuth.user.email,
+                uid: userAuth.user.uid
+            }))
+        })
+        .catch((err) => alert(err))
+    }
+
     const clearInfo = () =>{
         setEmailLogin("")
         setUserPassword("")
@@ -80,6 +94,7 @@ const Login = () => {
                             <input type="password" value={userPassword} onChange={(e) => setUserPassword(e.target.value)} />
                         </div>
                         <button className="form__btn" onClick={ToLogin}>SIGN IN</button>
+                        <button className="form__btn google__btn" onClick={LoginGoogle}><img src={logo} alt="" /> SIGIN WITH Google</button>
                     </form>
                 </div>
             </div>
