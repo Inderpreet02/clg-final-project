@@ -3,13 +3,18 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectBasket } from "../features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { LOGOUT, selectBasket } from "../features/userSlice";
+import logo from "./forbirds.png"
 
 const Header=()=>{
 
     const basket = useSelector(selectBasket);
     const items = basket.length;
+    const dispatch = useDispatch();
+    const ToLogout = () => {
+        dispatch(LOGOUT());
+    }
 
     return(
         <div className="header">
@@ -21,14 +26,14 @@ const Header=()=>{
                 
                <Link to="/">
                    <div className="header__mid">
-                       <img src="https://cdn.allbirds.com/image/upload/v1571355713/icons/allbirds-logo.svg" alt=""/>
+                       <img src={logo} alt=""/>
                    </div>
                </Link>
 
                <div className="header__right">
-                   <PermIdentityIcon/>
+                   <PermIdentityIcon onClick={ToLogout} className="logout__styles"/>
                    <HelpOutlineIcon/>
-                   <Link to="/checkout"className="link">
+                   <Link to="/checkout" className="link">
                        <ShoppingCartIcon/>
                        <span>{items}</span>
                    </Link>
