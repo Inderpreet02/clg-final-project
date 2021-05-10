@@ -15,8 +15,8 @@ const TestCheckout = () => {
             id: 1,
         }))
 
-        toast("An Item has been removed!!", {
-            position: "top-right",
+        toast.dark("An Item has been added!!", {
+            position: "bottom-right",
             autoClose: 1200,
         });
     }
