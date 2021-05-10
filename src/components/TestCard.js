@@ -18,7 +18,7 @@ const TestCard = ( {src, title, price} ) => {
         }))
 
         toast.dark("An Item has been added!!", {
-            position: "top-right",
+            position: "bottom-right",
             autoClose: 1200,
         });
     }
