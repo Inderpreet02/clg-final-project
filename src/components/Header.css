@@ -8,8 +8,13 @@
 }
 
 .header__mid{
-    width:90px;
+    width:110px;
     height:auto;
+}
+
+.header__mid > img{
+    width: 100%;
+    object-fit: contain;
 }
 
 .header__right{
@@ -43,3 +48,6 @@
     padding-left: 10px;
 }
 
+.logout__styles{
+    cursor: pointer;
+}
