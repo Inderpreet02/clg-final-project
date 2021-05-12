@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 import "./ImageSlider.css";
+import Btn from "./Btn";
 ///This uses react-elastic-carousel library installed using 
 ///npm install --save styled-components
 ///npm install --save react-elastic-carousel
@@ -22,10 +23,16 @@ function ImageSlider(props) {
           <Item>
               <div className="image_container">
                 <img src={props.src1}/>
-                <strong>{props.text1}</strong>
+                {props.button ? (
+                  <div className="image_containerText">
+                    <strong>{props.text1}</strong>
+                    <p>$150</p>
+                    <Btn text={"BUY NOW"}/>
+                  </div>
+                ) : (
+                  <strong>{props.text1}</strong>
+                )}
               </div>
-              
-
             </Item>
           <Item>
               <div className="image_container">

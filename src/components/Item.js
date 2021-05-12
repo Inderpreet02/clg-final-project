@@ -6,6 +6,7 @@ export default styled.div`
   align-items: center;
   height: 450px;
   width: 100%;
+  max-width: 1500px;
   background:white;
   margin-right:20px;
   font-size: 4em;

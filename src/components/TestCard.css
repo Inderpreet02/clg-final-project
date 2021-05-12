@@ -1,0 +1,8 @@
+.testCard{
+    margin: 10px 30px;
+}
+
+.testCard > img{
+    max-width: 300px;
+    object-fit: contain;
+}

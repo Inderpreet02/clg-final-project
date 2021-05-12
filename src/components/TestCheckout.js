@@ -1,38 +1,21 @@
-import { useDispatch, useSelector } from "react-redux";
-import { REMOVE_FROM_CART, selectBasket } from "../features/userSlice";
-import Btn from "./Btn";
-import { ToastContainer, toast } from 'react-toastify';
+import { useSelector } from "react-redux";
+import { selectBasket } from "../features/userSlice";
 import 'react-toastify/dist/ReactToastify.css';
+import TestCard from "./TestCard";
 
 
 const TestCheckout = () => {
 
     const basket = useSelector(selectBasket);
-    const dispatch = useDispatch();
-
-    const removeFormCart = () =>{
-        dispatch(REMOVE_FROM_CART({
-            id: 1,
-        }))
-
-        toast.dark("An Item has been added!!", {
-            position: "bottom-right",
-            autoClose: 1200,
-        });
-    }
 
     return (
         <div className="checkout">
             <h1>Hello</h1>
             {basket.map((item) => (
                 <div className="disp">
-                    <img src={item.src} alt=""/>
-                    <h1>{item.title}</h1>
-                    <p>${item.price}</p>
-                    <Btn text={"Remove Product"} color={false} onClick={removeFormCart}/>
+                    <TestCard text={"REMOVE"} title={item.title} price={item.price} src={item.src} id={item.id} remove={true} />
                 </div>
             ))}
-            <ToastContainer />
         </div>
     );
 }

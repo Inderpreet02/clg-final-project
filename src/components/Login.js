@@ -32,7 +32,7 @@ const Login = () => {
     const ToRegister = (e) =>{
         e.preventDefault();
 
-        if(passwordRegister != passwordConfirmRegister){
+        if(passwordRegister !== passwordConfirmRegister){
             alert("Please check the filled fields!!!")
             clearInfo();
             return

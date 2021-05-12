@@ -1,0 +1,6 @@
+.testProduct{
+    display: flex;
+    max-width: 1700px;
+    overflow-x: scroll;
+    margin: auto;
+}

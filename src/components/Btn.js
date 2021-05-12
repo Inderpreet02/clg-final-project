@@ -1,6 +1,9 @@
 import "./Btn.css"
 
+
 const Btn = ( {text, color, onClick} ) => {
+
+
     return (
         <div className="btn" onClick={onClick}>
             {color ? (
