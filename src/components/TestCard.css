@@ -1,8 +1,34 @@
 .testCard{
-    margin: 10px 30px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px rgba(33, 42, 47, 0.363)
+}
+
+.horizontal{
+  display: flex;
+}
+
+.horizontal > .card__text{
+  padding: 20px;
+}
+
+.horizontal > .card__text > .card__price{
+  margin-bottom: 20px;
+}
+
+.testCard:hover{
+  border: 1px solid rgb(33, 42, 47);
+  padding: 9px;
 }
 
 .testCard > img{
-    max-width: 300px;
-    object-fit: contain;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 850px) {
+
+  .horizontal{
+    flex-direction: column;
+  }
 }

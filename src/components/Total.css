@@ -1,0 +1,35 @@
+.total{
+    border: 1px solid black;
+    padding: 30px 20px 50px 20px;
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.total__btn{
+    padding: 20px 50px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: rgb(33, 42, 47);
+    border: 2px solid rgb(33, 42, 47);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+.total__btn:hover{
+    background-color: #fff;
+    color: rgb(33, 42, 47);
+}
+
+@media screen and (max-width: 850px) {
+    
+    .total{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .total__btn{
+        padding: 5px 40px;
+        max-height: 60px;
+    }
+}

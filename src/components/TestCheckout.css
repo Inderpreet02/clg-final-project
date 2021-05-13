@@ -1,0 +1,21 @@
+.checkout{
+    padding: 100px 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.checkout__left{
+    flex: 0.5;
+}
+
+.checkout__right{
+    flex: 0.3;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .checkout{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

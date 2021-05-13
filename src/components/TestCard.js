@@ -36,11 +36,13 @@ const TestCard = ( {src, title, price, id, remove, text} ) => {
 
 
     return (
-        <div className="testCard">
+        <div className={remove ? "testCard horizontal" : "testCard"}>
             <img src={src} alt=""/>
             <div className="card__text">
-                <strong>{title}</strong>
-                <strong>${price}</strong>
+                <div className="card__price">
+                    <h3>{title}</h3>
+                    <strong>${price}</strong>
+                </div>
                 <Btn text={text} color={!true} onClick={ remove ? removeFormCart : addToCart}/>
                 <ToastContainer />
             </div>

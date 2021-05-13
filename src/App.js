@@ -25,8 +25,8 @@ import ImageSlider from "./components/ImageSlider"
 function App() {
 
   const dispatch = useDispatch();
-  // const user = useSelector(selectUser);
-   const user = true;
+  const user = useSelector(selectUser);
+  //  const user = true;
 
 
   const history = useHistory();
@@ -80,6 +80,7 @@ function App() {
             <Header/>
             <Main/>
             <Favorites/>
+            <TestProduct/>
             <Wonder/>
             <ImageSlider
               head="Shop By Category"
@@ -97,24 +98,6 @@ function App() {
               text6="Men' Wallet"
               src7="https://images-na.ssl-images-amazon.com/images/I/51G9pdgv2aL.jpg"
               text7="Women's Handbag"
-            />
-            <ImageSlider
-              button="true"
-              head="New Arrivals"
-              src1="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/w7eZpEBPumul0qpK2pwBT/1"
-              text1="Men's Wool Runners"
-              src2="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/69FFj332jxBH5iR2FjhJxd/1"
-              text2="Women's Wool Loungers"
-              src3="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/2fwdpLI90gBu0Lot4SIEpf/1"
-              text3="Men's Wool Piper"
-              src4="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/2cFLbOqICKwH8hUhjVNkLc/1"
-              text4="Woman's Wool Piper"
-              src5="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/7uzLqv2qatcZtOiq6ItnDR/1"
-              text5="Men's Tree Dasher Relay"
-              src6="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/3tGLTBWhXrlgkxQRSc51im/1"
-              text6="Women's Tree Breezer"
-              src7="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/6foNxrUUA6gWTdJsjDn2lr/1"
-              text7="Men's Tree Skipper"
             />
             <TestProduct/>
           </Route>
