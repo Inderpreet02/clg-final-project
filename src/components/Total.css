@@ -26,6 +26,7 @@
     .total{
         display: flex;
         justify-content: space-evenly;
+        flex-direction: column;
     }
 
     .total__btn{

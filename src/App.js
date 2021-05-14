@@ -25,8 +25,8 @@ import ImageSlider from "./components/ImageSlider"
 function App() {
 
   const dispatch = useDispatch();
-  const user = useSelector(selectUser);
-  //  const user = true;
+  // const user = useSelector(selectUser);
+   const user = true;
 
 
   const history = useHistory();
@@ -35,9 +35,9 @@ function App() {
     auth.onAuthStateChanged(userAuth => {
       if(userAuth){
         dispatch(LOGIN({
-          name: userAuth.user.displayName,
-          email: userAuth.user.email,
-          uid: userAuth.user.uid,
+          name: userAuth.user?.displayName,
+          email: userAuth.user?.email,
+          uid: userAuth.user?.uid,
         }))
 
         history.push("/");

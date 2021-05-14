@@ -6,6 +6,8 @@
 
 .horizontal{
   display: flex;
+  border: 1px solid black;
+  padding: 9px;
 }
 
 .horizontal > .card__text{

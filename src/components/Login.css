@@ -74,3 +74,12 @@
 .google__btn > img{
     width: 40px;
 }
+
+@media screen and (max-width: 850px) {
+    
+    .login{
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+}

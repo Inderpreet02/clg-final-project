@@ -31,8 +31,8 @@ const Total = () => {
         <div className="total">
             <div className="total__text">
                 <h2>Your Total</h2>
-                <h3>Total Items In The Basket: {totalitems.length}</h3>
-                <p>Total Price: ${amount}</p>
+                <h3>Total Price: ${amount}</h3>
+                <p>Total Items In The Basket: {totalitems.length}</p> 
             </div>
             <button className="total__btn" onClick={placeOrder}>
                 Place Order
