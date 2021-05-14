@@ -1,7 +1,15 @@
 .testCard{
   margin: 20px;
   padding: 10px;
-  box-shadow: 0 0 10px 2px rgba(33, 42, 47, 0.363)
+  box-shadow: 0 0 10px 2px rgba(33, 42, 47, 0.363);
+  display: flex;
+  flex-direction: column;
+  font-size:3.4602076124567476vh;
+  width:28.125vw;
+  height: 77.85467128027682vh;
+  margin-bottom: 5.190311418685121vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .horizontal{
@@ -24,8 +32,8 @@
 }
 
 .testCard > img{
-  max-width: 300px;
-  object-fit: contain;
+  max-height: 51.90311418685121vh;
+  max-width: 51.90311418685121vh;
 }
 
 @media screen and (max-width: 850px) {

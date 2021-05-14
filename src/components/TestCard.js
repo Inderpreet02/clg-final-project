@@ -5,7 +5,7 @@ import "./TestCard.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const TestCard = ( {src, title, price, id, remove, text} ) => {
+const TestCard = ( {src, title, price, id, remove, text,show} ) => {
 
     const dispatch = useDispatch();
 
@@ -41,9 +41,9 @@ const TestCard = ( {src, title, price, id, remove, text} ) => {
             <div className="card__text">
                 <div className="card__price">
                     <h3>{title}</h3>
-                    <strong>${price}</strong>
+                    <strong>{price}</strong>
                 </div>
-                <Btn text={text} color={!true} onClick={ remove ? removeFormCart : addToCart}/>
+                <Btn text={text} color={!true} onClick={ remove ? removeFormCart : addToCart} show={show}/>
                 <ToastContainer />
             </div>
         </div>
