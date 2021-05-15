@@ -1,17 +1,17 @@
 import { useDispatch } from "react-redux"
-import { ADD_TO_CART } from "../features/userSlice";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../features/userSlice";
 import Btn from "./Btn"
 import "./TestCard.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const TestCard = ( {src, title, price} ) => {
+const TestCard = ( {src, title, price, id, remove, text,show} ) => {
 
     const dispatch = useDispatch();
 
     const addToCart = () => {
         dispatch(ADD_TO_CART({
-            id: 1,
+            id: id,
             title: title,
             src: src,
             price: price,
@@ -23,14 +23,27 @@ const TestCard = ( {src, title, price} ) => {
         });
     }
 
+    const removeFormCart = () =>{
+        dispatch(REMOVE_FROM_CART({
+            id: id,
+        }))
+
+        toast.dark("An Item has been added!!", {
+            position: "bottom-right",
+            autoClose: 1200,
+        });
+    }
+
 
     return (
-        <div className="testCard">
+        <div className={remove ? "testCard horizontal" : "testCard"}>
             <img src={src} alt=""/>
             <div className="card__text">
-                <h5>{title}</h5>
-                <p>${price}</p>
-                <Btn text={"Buy Now"} color={!true} onClick={addToCart}/>
+                <div className="card__price">
+                    <h3>{title}</h3>
+                    <strong>{price}</strong>
+                </div>
+                <Btn text={text} color={!true} onClick={ remove ? removeFormCart : addToCart} show={show}/>
                 <ToastContainer />
             </div>
         </div>

@@ -134,13 +134,6 @@ const Favorites = () => {
         setCurrData(basics);
         selectCurrGenra3();
     }
-    
-    // const dispatch = useDispatch();
-    // dispatch(LOGIN({
-    //     user: "test user",
-    // }));
-    // const user = useSelector(selectUser);
-    // console.log("THIS IS THE USER -------> ", user );
 
     return (
         <div className="favorites">
