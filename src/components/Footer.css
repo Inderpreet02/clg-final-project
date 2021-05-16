@@ -1,0 +1,39 @@
+.footer{
+    width: 100%;
+    background-color: #212a2f;
+    color: #fff;
+}
+
+.footer__content{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 80px;
+}
+
+.footer__column > ul > li{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.footer__column > ul > li:hover{
+    text-decoration: underline;
+}
+
+.footer__heading {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.footer > h1{
+    text-align: center;
+    padding: 50px;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .footer__content{
+        flex-direction: column;
+    }
+}

@@ -5,7 +5,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LOGOUT, selectBasket, selectUser } from "../features/userSlice";
-import logo from "./logo.png"
+import logo from "./logo2.png"
 
 const Header=()=>{
 

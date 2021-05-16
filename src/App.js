@@ -19,14 +19,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LOGIN, LOGOUT, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import ImageSlider from "./components/ImageSlider"
+import Footer from './components/Footer';
+
 
 
 
 function App() {
 
   const dispatch = useDispatch();
-  // const user = useSelector(selectUser);
-   const user = true;
+  const user = useSelector(selectUser);
+  //  const user = true;
 
 
   const history = useHistory();
@@ -40,7 +42,7 @@ function App() {
           uid: userAuth.user?.uid,
         }))
 
-        history.push("/");
+        history?.push("/");
       } else {
         dispatch(LOGOUT());
       }
@@ -51,7 +53,7 @@ function App() {
     <div className="App">
       <Router>
       <>
-      {!user ? (
+      {!user?.email ? (
           <div className="app__login">
               <Header/>
               <Login/>
@@ -61,10 +63,12 @@ function App() {
           <Route path="/checkout">
             <Header/>
             <TestCheckout />
+            <Footer/>
           </Route>
           <Route path="/login">
             <Header/>
             <Login/>
+            <Footer/>
           </Route>
           <Route path="/animate">
             <Canvas camer={{ position: [-10, -10, -10], fov: 35}}>
@@ -99,38 +103,9 @@ function App() {
               src7="https://images-na.ssl-images-amazon.com/images/I/51G9pdgv2aL.jpg"
               text7="Women's Handbag"
             />
-            <ImageSlider
-              head="New Arrivals"
-              btntext="Add to Cart"
-              src1="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/w7eZpEBPumul0qpK2pwBT/1"
-              text1="Men's Wool Runners"
-              id1="Men's_Wool_Runners"
-              price1="$200"
-              src2="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/69FFj332jxBH5iR2FjhJxd/1"
-              text2="Women's Wool Loungers"
-              price2="$150"
-              id2="Women's_Wool_Loungers"
-              src3="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/2fwdpLI90gBu0Lot4SIEpf/1"
-              text3="Men's Wool Piper"
-              price3="$250"
-              id3="Men's_Wool_Piper"
-              src4="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/2cFLbOqICKwH8hUhjVNkLc/1"
-              text4="Woman's Wool Piper"
-              price4="$230"
-              id4="Woman's_Wool_Piper"
-              src5="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/7uzLqv2qatcZtOiq6ItnDR/1"
-              text5="Men's Tree Dasher Relay"
-              price5="$245"
-              id5="Men's Tree_Dasher_Relay"
-              src6="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/3tGLTBWhXrlgkxQRSc51im/1"
-              text6="Women's Tree Breezer"
-              price6="$189"
-              id6="Women's_Tree_Breezer"
-              src7="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/6foNxrUUA6gWTdJsjDn2lr/1"
-              text7="Men's Tree Skipper"
-              price7="$299"
-              id7="Men's Tree Skipper"
-              />
+            <TestProduct/>
+            <Footer/>
+
           </Route>
         </Switch>
         )
