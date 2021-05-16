@@ -3,7 +3,7 @@ import "./Footer.css"
 const Footer = () => {
     return (
         <div className="footer">
-            <h1>FORBIRDS</h1>
+            <h1>Authentic</h1>
             <div className="footer__content">
                 <div className="footer__column">
                     <ul type="none">
