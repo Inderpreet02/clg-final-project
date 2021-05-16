@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LOGIN, LOGOUT, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import ImageSlider from "./components/ImageSlider"
+import Footer from './components/Footer';
 
 
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/login">
             <Header/>
             <Login/>
+            <Footer/>
           </Route>
           <Route path="/animate">
             <Canvas camer={{ position: [-10, -10, -10], fov: 35}}>
@@ -100,6 +102,7 @@ function App() {
               text7="Women's Handbag"
             />
             <TestProduct/>
+            <Footer/>
           </Route>
         </Switch>
         )

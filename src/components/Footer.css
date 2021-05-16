@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    background-color: #212a2f;
+    color: #fff;
+}
+
+.footer__content{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 80px;
+}
+
+.footer__column > ul > li{
+    padding: 5px;
+}
+
+.footer__heading {
+    padding-bottom: 20px;
+}
+
+.footer > h1{
+    text-align: center;
+    padding: 50px;
+}
