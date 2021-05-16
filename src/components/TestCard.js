@@ -28,7 +28,7 @@ const TestCard = ( {src, title, price, id, remove, text} ) => {
             id: id,
         }))
 
-        toast.dark("An Item has been added!!", {
+        toast.dark("An Item has been removed!!", {
             position: "bottom-right",
             autoClose: 1200,
         });

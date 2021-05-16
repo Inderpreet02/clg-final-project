@@ -23,11 +23,12 @@ import Footer from './components/Footer';
 
 
 
+
 function App() {
 
   const dispatch = useDispatch();
-  // const user = useSelector(selectUser);
-   const user = true;
+  const user = useSelector(selectUser);
+  //  const user = true;
 
 
   const history = useHistory();
@@ -41,7 +42,7 @@ function App() {
           uid: userAuth.user?.uid,
         }))
 
-        history.push("/");
+        history?.push("/");
       } else {
         dispatch(LOGOUT());
       }
@@ -52,7 +53,7 @@ function App() {
     <div className="App">
       <Router>
       <>
-      {!user ? (
+      {!user?.email ? (
           <div className="app__login">
               <Header/>
               <Login/>
