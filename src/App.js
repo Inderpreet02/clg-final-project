@@ -84,10 +84,10 @@ function App() {
             <Header/>
             <Main/>
             <Favorites/>
-            <TestProduct/>
             <Wonder/>
             <ImageSlider
               head="Shop By Category"
+              show="hide"
               src1="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/1pbT8yieU1eVm3Yhjh55vV/1"
               text1="Men's Shoes"
               src2="//cdn.allbirds.com/image/fetch/q_auto,f_auto/w_450,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/carouselCard/en-US/images/4Wbncz8ES9fi5UFwLfFuvG/1"
@@ -105,6 +105,7 @@ function App() {
             />
             <TestProduct/>
             <Footer/>
+
           </Route>
         </Switch>
         )
