@@ -33,27 +33,27 @@ function App() {
 
   const history = useHistory();
 
-  useEffect(() => {
-    auth.onAuthStateChanged(userAuth => {
-      if(userAuth){
-        dispatch(LOGIN({
-          name: userAuth.user?.displayName,
-          email: userAuth.user?.email,
-          uid: userAuth.user?.uid,
-        }))
+  // useEffect(() => {
+  //   auth.onAuthStateChanged(userAuth => {
+  //     if(userAuth){
+  //       dispatch(LOGIN({
+  //         name: userAuth.user?.displayName,
+  //         email: userAuth.user?.email,
+  //         uid: userAuth.user?.uid,
+  //       }))
 
-        history?.push("/");
-      } else {
-        dispatch(LOGOUT());
-      }
-    })
-  }, [])
+  //       history?.push("/");
+  //     } else {
+  //       dispatch(LOGOUT());
+  //     }
+  //   })
+  // }, [])
 
   return (
     <div className="App">
       <Router>
       <>
-      {!user?.email ? (
+      {!user ? (
           <div className="app__login">
               <Header/>
               <Login/>

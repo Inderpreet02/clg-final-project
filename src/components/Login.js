@@ -94,7 +94,7 @@ const Login = () => {
                             <input type="password" value={userPassword} onChange={(e) => setUserPassword(e.target.value)} />
                         </div>
                         <button className="form__btn" onClick={ToLogin}>SIGN IN</button>
-                        <button className="form__btn google__btn" onClick={LoginGoogle}><img src={logo} alt="" /> SIGIN WITH Google</button>
+                        <button className="form__btn google__btn" onClick={LoginGoogle}><img src={logo} alt="" /> SIGN IN WITH Google</button>
                     </form>
                 </div>
             </div>
