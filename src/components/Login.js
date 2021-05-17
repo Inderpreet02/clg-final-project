@@ -27,6 +27,7 @@ const Login = () => {
                 email: userAuth.user.email
             }))
         })
+        .catch(err => alert(err));
     }
 
     const ToRegister = (e) =>{
